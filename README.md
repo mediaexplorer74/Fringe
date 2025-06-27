@@ -35,9 +35,9 @@ My fork of Fringe browser (a browser based on WinUI & UWP, supported modern Edge
 - Chinese - International English semi-translation (to be continued)
 
 ## Tech. details
-App type: UWP
-Win. SDK used: 19041
-Min. Win SDK used: 17763 (hello, Andromeda)))
+- App type: UWP
+- Win. SDK used: 19041
+- Min. Win SDK used: 17763 (hello, Andromeda)))
 
 ## Reference(s)
 - https://github.com/MSEDGE-CORE/Fringe Original Fringe Browser 
