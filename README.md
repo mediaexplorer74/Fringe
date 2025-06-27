@@ -3,9 +3,8 @@ My fork of Fringe browser (a browser based on WinUI & UWP, supported modern Edge
 
 ## Download address
 1. Lan Ziyun：https://msedge.lanzoul.com/b02kwki2f
-2. Microsoft Store:https://apps.microsoft.com/store/detail/9N5WFD8J7P5G?cid=DevShareMCLPCS
-3. Https://msedge.lanzoul.com/iGrfL27ttpra
-4. https://aka.ms/SegoeFluentIcons
+2. Microsoft Store: https://apps.microsoft.com/store/detail/9N5WFD8J7P5G?cid=DevShareMCLPCS
+3. Lanzoul.com: Https://msedge.lanzoul.com/iGrfL27ttpra
 
 ## Functional features
 1. Promissory note, promissory note
@@ -17,7 +16,6 @@ My fork of Fringe browser (a browser based on WinUI & UWP, supported modern Edge
 
 
 ## Screenshots
-
 - New tab: 
 ![Figure 2025-05-17 160652](https://github.com/user-attachments/assets/537fea7a-d9b9-4f30-9158-b703a943e75e).
 
@@ -44,6 +42,7 @@ Min. Win SDK used: 17763 (hello, Andromeda)))
 ## Reference(s)
 - https://github.com/MSEDGE-CORE/Fringe Original Fringe Browser 
 - https://github.com/MSEDGE-CORE Cool C# Developer, author of Fringe project 
+- https://aka.ms/SegoeFluentIcons Used Segoe Fluent Icons
 
 ## ..
 As is. No support. RnD it yourself.
