@@ -58,7 +58,7 @@ namespace App3.SettingsPages
                 }
                 else if (file.FileType == ".html")
                 {
-                    // 创建 HtmlDocument 对象并加载 HTML 文件
+                    // Create an HTMLDOCCENT object and load the HTML file
                     var htmlDoc = new HtmlDocument();
                     try
                     {
@@ -69,13 +69,13 @@ namespace App3.SettingsPages
                         return;
                     }
 
-                    // 查找所有的 <dt> 节点，因为书签和文件夹通常包含在 <dt> 标签内
+                    // Find all <dt> nodes, because bookmarks and folders are usually included in the <dt> tag
                     var dtNodes = htmlDoc.DocumentNode.SelectNodes("//dt");
                     if (dtNodes != null)
                     {
                         foreach (var dtNode in dtNodes)
                         {
-                            // 查找 <a> 标签，它代表书签
+                            // Find the <a> tag, which represents a bookmark
                             var aNode = dtNode.SelectSingleNode("a");
                             if (aNode != null)
                             {
@@ -99,7 +99,8 @@ namespace App3.SettingsPages
             string CollectionJson = JsonConvert.SerializeObject((Application.Current as App).CollectionList);
             try
             {
-                Windows.Storage.StorageFile CollectionFile = await StorageFolder.CreateFileAsync("LocalStorage2\\Collections.json", Windows.Storage.CreationCollisionOption.OpenIfExists);
+                Windows.Storage.StorageFile CollectionFile = await StorageFolder.CreateFileAsync("LocalStorage2\\Collections.json",
+                    Windows.Storage.CreationCollisionOption.OpenIfExists);
                 await Windows.Storage.FileIO.WriteTextAsync(CollectionFile, CollectionJson);
             }
             catch { }
@@ -117,7 +118,8 @@ namespace App3.SettingsPages
             Windows.Storage.StorageFolder StorageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
             try
             {
-                Windows.Storage.StorageFile HistoryFile = await StorageFolder.CreateFileAsync("LocalStorage2\\History.json", Windows.Storage.CreationCollisionOption.OpenIfExists);
+                Windows.Storage.StorageFile HistoryFile = await StorageFolder.CreateFileAsync("LocalStorage2\\History.json", 
+                    Windows.Storage.CreationCollisionOption.OpenIfExists);
                 await Windows.Storage.FileIO.WriteTextAsync(HistoryFile, HistoryJson);
             }
             catch { }
@@ -130,13 +132,13 @@ namespace App3.SettingsPages
             Windows.Storage.StorageFolder StorageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
             Windows.Storage.StorageFile CollectionFile;
 
-            // 创建 HTML 文档
+            // Create an HTML document
             var htmlDoc = new HtmlDocument();
-            htmlDoc.LoadHtml(@"<!DOCTYPE html><html><head><body></body></head></html>"); // 初始化基本结构
+            htmlDoc.LoadHtml(@"<!DOCTYPE html><html><head><body></body></head></html>"); // Initialize the basic structure
 
             try
             {
-                // 获取头部，添加元数据和标题
+                // Get the header, add metadata and title
                 var headNode = htmlDoc.DocumentNode.SelectSingleNode("//head");
 
                 var metaNode = new HtmlNode(HtmlNodeType.Element, headNode.OwnerDocument, 0);
@@ -144,16 +146,16 @@ namespace App3.SettingsPages
                 metaNode.Attributes.Add("charset", "UTF-8");
                 headNode.AppendChild(metaNode);
 
-                // 创建主体内容
+                // Create main content
                 var bodyNode = htmlDoc.DocumentNode.SelectSingleNode("//body");
                 var mainHeading = HtmlNode.CreateNode("<h1>收藏夹</h1>");
                 bodyNode.AppendChild(mainHeading);
 
-                // 创建无序列表
+                // Create an unordered list
                 var listNode = HtmlNode.CreateNode("<dl></dl>");
                 bodyNode.AppendChild(listNode);
 
-                // 遍历数据，生成列表项
+                // Traverse the data to generate list items
                 foreach (var item in (Application.Current as App).CollectionList)
                 {
                     var listItem = HtmlNode.CreateNode("<dt></dt>");

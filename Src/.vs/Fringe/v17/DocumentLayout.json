@@ -1,0 +1,84 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\!RnD\\Fringe-UWP\\Src\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{57A34572-3D24-4367-8F27-998146B5345F}|Fringe\\Fringe.csproj|c:\\users\\admin\\source\\repos\\!rnd\\fringe-uwp\\src\\fringe\\download.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{57A34572-3D24-4367-8F27-998146B5345F}|Fringe\\Fringe.csproj|solutionrelative:fringe\\download.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A34572-3D24-4367-8F27-998146B5345F}|Fringe\\Fringe.csproj|c:\\users\\admin\\source\\repos\\!rnd\\fringe-uwp\\src\\fringe\\webpage2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{57A34572-3D24-4367-8F27-998146B5345F}|Fringe\\Fringe.csproj|solutionrelative:fringe\\webpage2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A34572-3D24-4367-8F27-998146B5345F}|Fringe\\Fringe.csproj|c:\\users\\admin\\source\\repos\\!rnd\\fringe-uwp\\src\\fringe\\webpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{57A34572-3D24-4367-8F27-998146B5345F}|Fringe\\Fringe.csproj|solutionrelative:fringe\\webpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A34572-3D24-4367-8F27-998146B5345F}|Fringe\\Fringe.csproj|c:\\users\\admin\\source\\repos\\!rnd\\fringe-uwp\\src\\fringe\\collection.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{57A34572-3D24-4367-8F27-998146B5345F}|Fringe\\Fringe.csproj|solutionrelative:fringe\\collection.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Download.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\!RnD\\Fringe-UWP\\Src\\Fringe\\Download.xaml",
+              "RelativeDocumentMoniker": "Fringe\\Download.xaml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\!RnD\\Fringe-UWP\\Src\\Fringe\\Download.xaml",
+              "RelativeToolTip": "Fringe\\Download.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-27T16:33:56.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WebPage2.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\!RnD\\Fringe-UWP\\Src\\Fringe\\WebPage2.xaml",
+              "RelativeDocumentMoniker": "Fringe\\WebPage2.xaml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\!RnD\\Fringe-UWP\\Src\\Fringe\\WebPage2.xaml",
+              "RelativeToolTip": "Fringe\\WebPage2.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-27T16:33:40.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WebPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\!RnD\\Fringe-UWP\\Src\\Fringe\\WebPage.xaml",
+              "RelativeDocumentMoniker": "Fringe\\WebPage.xaml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\!RnD\\Fringe-UWP\\Src\\Fringe\\WebPage.xaml",
+              "RelativeToolTip": "Fringe\\WebPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-27T16:33:31.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Collection.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\!RnD\\Fringe-UWP\\Src\\Fringe\\Collection.xaml",
+              "RelativeDocumentMoniker": "Fringe\\Collection.xaml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\!RnD\\Fringe-UWP\\Src\\Fringe\\Collection.xaml",
+              "RelativeToolTip": "Fringe\\Collection.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-27T16:32:19.028Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

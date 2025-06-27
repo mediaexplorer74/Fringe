@@ -26,7 +26,7 @@ namespace App3.SettingsPages
         public About()
         {
             this.InitializeComponent();
-            TextVersion.Text = string.Format("版本：{0}.{1}.{2}", Package.Current.Id.Version.Major, Package.Current.Id.Version.Minor, Package.Current.Id.Version.Build);
+            TextVersion.Text = string.Format("version：{0}.{1}.{2}", Package.Current.Id.Version.Major, Package.Current.Id.Version.Minor, Package.Current.Id.Version.Build);
         }
 
         private void ProjectHome_Click(object sender, RoutedEventArgs e)
