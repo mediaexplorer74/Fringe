@@ -8,15 +8,15 @@
   IgnorableNamespaces="uap mp uap2">
 
   <Identity
-    Name="MSEDGE.Edge18"
-    Publisher="CN=MSEDGE"
+    Name="ME.Edge18V2"
+    Publisher="CN=Admin"
     Version="2.0.42.0" />
 
   <mp:PhoneIdentity PhoneProductId="19fde23a-700f-4086-a465-39a33c31f435" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>Fringe</DisplayName>
-    <PublisherDisplayName>MSEDGE</PublisherDisplayName>
+    <PublisherDisplayName>Admin</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -33,7 +33,7 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="App3.App">
       <uap:VisualElements
-        DisplayName="浏海"
+        DisplayName="Fringe"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
         Description="Fringe"

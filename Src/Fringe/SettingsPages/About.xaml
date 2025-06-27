@@ -55,7 +55,7 @@
                     </Grid>
                     <Grid HorizontalAlignment = "Stretch" Margin = "0,12,0,12">
                         <Button IsTabStop="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0"/>
-                        <TextBlock FontFamily="HarmonyOS Sans SC" FontSize = "14" Text="c" Margin = "26,20,0,0" VerticalAlignment = "Top" HorizontalAlignment = "Left" />
+                        <TextBlock FontFamily="HarmonyOS Sans SC" FontSize = "14" Text="Dependencys &amp; Reference" Margin = "26,20,0,0" VerticalAlignment = "Top" HorizontalAlignment = "Left" />
                         <Grid Background="Transparent" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
                         <StackPanel AutomationProperties.Name="Dependencies &amp; Reference(s)" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="16,48,0,16" >
                             <HyperlinkButton FontFamily="HarmonyOS Sans SC" Name="LinkWinUI" Content="Microsoft.WinUI" Click="LinkWinUI_Click"/>

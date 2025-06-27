@@ -29,7 +29,6 @@ using Windows.Storage.Streams;
 using Windows.UI.Xaml.Media.Imaging;
 using Newtonsoft.Json;
 
-// https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 
 namespace App3
 {
@@ -128,19 +127,25 @@ namespace App3
             if(Browser.PageTabStopSet == 0)
             {
                 EdgeWebView.IsTabStop = SearchBox.IsTabStop = true;
-                Button_Back.IsTabStop = Button_Forward.IsTabStop = Button_Refresh.IsTabStop = ButtonM_Back.IsTabStop = ButtonM_Forward.IsTabStop = ButtonM_Refresh.IsTabStop = ButtonM_NewTab.IsTabStop = ButtonM_TabList.IsTabStop = ButtonM_More.IsTabStop = CollectionButton.IsTabStop = HistoryButton.IsTabStop = DownloadButton.IsTabStop = MoreButton.IsTabStop = true;
+                Button_Back.IsTabStop = Button_Forward.IsTabStop = Button_Refresh.IsTabStop = ButtonM_Back.IsTabStop = 
+                    ButtonM_Forward.IsTabStop = ButtonM_Refresh.IsTabStop = ButtonM_NewTab.IsTabStop = ButtonM_TabList.IsTabStop = 
+                    ButtonM_More.IsTabStop = CollectionButton.IsTabStop = HistoryButton.IsTabStop = DownloadButton.IsTabStop = MoreButton.IsTabStop = true;
                 LinkBox.IsTabStop = true;
             }
             else if(Browser.PageTabStopSet == 1)
             {
                 EdgeWebView.IsTabStop = SearchBox.IsTabStop = false;
-                Button_Back.IsTabStop = Button_Forward.IsTabStop = Button_Refresh.IsTabStop = ButtonM_Back.IsTabStop = ButtonM_Forward.IsTabStop = ButtonM_Refresh.IsTabStop = ButtonM_NewTab.IsTabStop = ButtonM_TabList.IsTabStop = ButtonM_More.IsTabStop = CollectionButton.IsTabStop = HistoryButton.IsTabStop = DownloadButton.IsTabStop = MoreButton.IsTabStop = true;
+                Button_Back.IsTabStop = Button_Forward.IsTabStop = Button_Refresh.IsTabStop = ButtonM_Back.IsTabStop = 
+                    ButtonM_Forward.IsTabStop = ButtonM_Refresh.IsTabStop = ButtonM_NewTab.IsTabStop = ButtonM_TabList.IsTabStop = 
+                    ButtonM_More.IsTabStop = CollectionButton.IsTabStop = HistoryButton.IsTabStop = DownloadButton.IsTabStop = MoreButton.IsTabStop = true;
                 LinkBox.IsTabStop = true;
             }
             else if(Browser.PageTabStopSet == 2)
             {
                 EdgeWebView.IsTabStop = SearchBox.IsTabStop = false;
-                Button_Back.IsTabStop = Button_Forward.IsTabStop = Button_Refresh.IsTabStop = ButtonM_Back.IsTabStop = ButtonM_Forward.IsTabStop = ButtonM_Refresh.IsTabStop = ButtonM_NewTab.IsTabStop = ButtonM_TabList.IsTabStop = ButtonM_More.IsTabStop = CollectionButton.IsTabStop = HistoryButton.IsTabStop = DownloadButton.IsTabStop = MoreButton.IsTabStop = false;
+                Button_Back.IsTabStop = Button_Forward.IsTabStop = Button_Refresh.IsTabStop = ButtonM_Back.IsTabStop = 
+                    ButtonM_Forward.IsTabStop = ButtonM_Refresh.IsTabStop = ButtonM_NewTab.IsTabStop = ButtonM_TabList.IsTabStop = 
+                    ButtonM_More.IsTabStop = CollectionButton.IsTabStop = HistoryButton.IsTabStop = DownloadButton.IsTabStop = MoreButton.IsTabStop = false;
                 LinkBox.IsTabStop = false;
             }
         }
@@ -158,7 +163,8 @@ namespace App3
             {
                 try
                 { 
-                    (Application.Current as App).HistoryList.Insert(0, new History_List { HistoryTitle = EdgeWebView.CoreWebView2.DocumentTitle, HistoryUri = EdgeWebView.Source.ToString() }); 
+                    (Application.Current as App).HistoryList.Insert(0, new History_List 
+                    { HistoryTitle = EdgeWebView.CoreWebView2.DocumentTitle, HistoryUri = EdgeWebView.Source.ToString() }); 
                 }
                 catch { }
 
@@ -166,7 +172,8 @@ namespace App3
                 {
                     string HistoryJson = JsonConvert.SerializeObject((Application.Current as App).HistoryList);
                     Windows.Storage.StorageFolder StorageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
-                    Windows.Storage.StorageFile HistoryFile = await StorageFolder.CreateFileAsync("LocalStorage2\\History.json", Windows.Storage.CreationCollisionOption.OpenIfExists);
+                    Windows.Storage.StorageFile HistoryFile = 
+                        await StorageFolder.CreateFileAsync("LocalStorage2\\History.json", Windows.Storage.CreationCollisionOption.OpenIfExists);
                     await Windows.Storage.FileIO.WriteTextAsync(HistoryFile, HistoryJson);
                 }
                 catch { }
@@ -438,7 +445,8 @@ namespace App3
         }
 
         private void CoreWebView2_PermissionRequested(CoreWebView2 sender, CoreWebView2PermissionRequestedEventArgs args)
-        {/*
+        {
+            /*
             Trace.WriteLine(args.PermissionKind.ToString());
             
             try
@@ -464,7 +472,8 @@ namespace App3
                     args.State = CoreWebView2PermissionState.Deny;
                 }
             }
-            catch { }*/
+            catch { }
+            */
             args.State = CoreWebView2PermissionState.Allow;
             args.Handled = true;
         }
@@ -637,9 +646,9 @@ namespace App3
                 LoadingBar.VerticalAlignment = VerticalAlignment.Top;
                 EdgeLinkGrid.VerticalAlignment = VerticalAlignment.Top;
                 SeparateLineLight.Y1 = SeparateLineLight.Y2 = SeparateLineDark.Y1 = SeparateLineDark.Y2 = 50;
-                if(MobilePageButton.Text == "桌面视图")
+                if(MobilePageButton.Text == "Desktop view")
                 {
-                    MobilePageButton.Text = "移动设备视图";
+                    MobilePageButton.Text = "Mobile device view";
                     if (isLoaded)
                     {
                         EdgeWebView.CoreWebView2.Settings.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36";
@@ -692,9 +701,9 @@ namespace App3
 
         private void MobilePage_Click(object sender, RoutedEventArgs e)
         {
-            if((sender as MenuFlyoutItem).Text == "移动设备视图")
+            if((sender as MenuFlyoutItem).Text == "Mobile device view")
             {
-                (sender as MenuFlyoutItem).Text = "桌面视图";
+                (sender as MenuFlyoutItem).Text = "Desktop view";
                 if (isLoaded)
                 {
                     EdgeWebView.CoreWebView2.Settings.UserAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1";
@@ -703,7 +712,7 @@ namespace App3
             }
             else
             {
-                (sender as MenuFlyoutItem).Text = "移动设备视图";
+                (sender as MenuFlyoutItem).Text = "Mobile device view";
                 if (isLoaded)
                 {
                     EdgeWebView.CoreWebView2.Settings.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36";

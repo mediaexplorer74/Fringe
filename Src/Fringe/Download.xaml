@@ -9,7 +9,9 @@
     mc:Ignorable="d">
 
     <Grid x:Name="Grid">
-        <Button AutomationProperties.Name="下载" Click="DownloadButton" ToolTipService.ToolTip="下载" Background="Transparent" BorderBrush="Transparent" BorderThickness="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="36" Margin="0,7,10,0">
+        <Button AutomationProperties.Name="Download" Click="DownloadButton" ToolTipService.ToolTip="Download" 
+                Background="Transparent" BorderBrush="Transparent" BorderThickness="1" HorizontalAlignment="Right" 
+                VerticalAlignment="Top" Height="36" Margin="0,7,10,0">
             <FontIcon FontFamily="Segoe Fluent Icons" Glyph="&#xE118;" FontSize="16"/>
         </Button>
         <Grid>
@@ -17,6 +19,7 @@
             <Line Name ="SeparateLineDark" Stroke="Gray" X1="0" Y1="50" Y2="50" StrokeThickness = "0.5"/>
         </Grid>
 
-        <muxc:WebView2 x:Name="EdgeWebView" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,50,0,0" CoreWebView2Initialized="EdgeWebView_CoreWebView2Initialized"/>
+        <muxc:WebView2 x:Name="EdgeWebView" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                       Margin="0,50,0,0" CoreWebView2Initialized="EdgeWebView_CoreWebView2Initialized"/>
     </Grid>
 </Page>

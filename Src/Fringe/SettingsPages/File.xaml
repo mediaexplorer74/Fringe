@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls">
 
-    <Grid HorizontalAlignment="Stretch" AutomationProperties.Name="文件">
+    <Grid HorizontalAlignment="Stretch" AutomationProperties.Name="File">
         <Grid HorizontalAlignment="Stretch" Margin="40,32,40,0" MaxWidth="720">
             <TextBlock x:Name="PageTitle" Text="Storage" FontWeight="Medium" Margin="4,32,0,0" FontSize="32" FontFamily="HarmonyOS Sans SC"/>
         </Grid>
@@ -19,14 +19,16 @@
                     <StackPanel Name="CollectionPanel" HorizontalAlignment="Stretch">
                         <Grid HorizontalAlignment = "Stretch" Margin = "0,6,0,0" MinHeight = "68" MaxHeight = "68" Height = "68">
                             <Button IsTabStop="False" HorizontalAlignment="Stretch" MinHeight="68" MaxHeight="68" Height="68" Margin="0,0,0,0"/>
-                            <TextBlock FontFamily="HarmonyOS Sans SC" FontSize = "16" Text = "Favorites" Margin = "26,0,0,0" VerticalAlignment = "Center" HorizontalAlignment = "Left" />
+                            <TextBlock FontFamily="HarmonyOS Sans SC" FontSize = "16" Text = "Favorites" Margin = "26,0,0,0" 
+                                       VerticalAlignment = "Center" HorizontalAlignment = "Left" />
                             <Grid Background="Transparent" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
                             <StackPanel Orientation="Horizontal" Margin="0,0,26,0" VerticalAlignment = "Center" HorizontalAlignment = "Right">
                                 <Button AutomationProperties.Name="Collection import" FontFamily="HarmonyOS Sans SC" 
-                                        x:Name="Collection_Import_Button" Click="Collection_Import" Content="导入" Width="56" Margin="0,0,4,0" 
+                                        x:Name="Collection_Import_Button" Click="Collection_Import" Content="File" Width="56" Margin="0,0,4,0" 
                                         VerticalAlignment = "Center" HorizontalAlignment = "Right" />
                                 <Button AutomationProperties.Name="Collection export" FontFamily="HarmonyOS Sans SC"
-                                        x:Name="Collection_Export_Button" Content="Export" Width="56" Margin="0,0,0,0" VerticalAlignment = "Center" HorizontalAlignment = "Right" >
+                                        x:Name="Collection_Export_Button" Content="Export" Width="56" Margin="0,0,0,0" 
+                                        VerticalAlignment = "Center" HorizontalAlignment = "Right" >
                                     <Button.Flyout>
                                         <MenuFlyout Placement="BottomEdgeAlignedRight">
                                             <MenuFlyoutItem Text="HTML" Click="Collection_ExportToHtml"/>
@@ -45,14 +47,18 @@
                             <Grid Background="Transparent" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
                             <StackPanel Orientation="Horizontal" Margin="0,0,26,0" VerticalAlignment = "Center" HorizontalAlignment = "Right">
                                 <Button AutomationProperties.Name="Import history" FontFamily="HarmonyOS Sans SC" x:Name="History_Import_Button"
-                                        Click="History_Import_Button_Click" Content="Import" Width="56" Margin="0,0,4,0" VerticalAlignment = "Center" HorizontalAlignment = "Right" />
+                                        Click="History_Import_Button_Click" Content="Import" Width="56" Margin="0,0,4,0" VerticalAlignment = "Center" 
+                                        HorizontalAlignment = "Right" />
                                 <Button AutomationProperties.Name="Export history" FontFamily="HarmonyOS Sans SC" x:Name="History_Export_Button"
-                                        Click="History_Export_Button_Click" Content="Export" Width="56" Margin="0,0,4,0" VerticalAlignment = "Center" HorizontalAlignment = "Right" >
+                                        Click="History_Export_Button_Click" Content="Export" Width="56" Margin="0,0,4,0" VerticalAlignment = "Center" 
+                                        HorizontalAlignment = "Right" >
                                 </Button>
-                                <Button FontFamily="HarmonyOS Sans SC" Content="Empty (clear)" Width="56" Margin="0,0,0,0" VerticalAlignment = "Center" HorizontalAlignment = "Right">
+                                <Button FontFamily="HarmonyOS Sans SC" Content="Empty (clear)" Width="56" Margin="0,0,0,0" VerticalAlignment = "Center" 
+                                        HorizontalAlignment = "Right">
                                     <Button.Flyout>
                                         <MenuFlyout x:Name="HistoryClearFlyout" Placement="BottomEdgeAlignedRight">
-                                            <MenuFlyoutItem Text="Make sure to clear the history" Click="History_Clear" HorizontalContentAlignment="Center" Margin="0"
+                                            <MenuFlyoutItem Text="Make sure to clear the history" Click="History_Clear" HorizontalContentAlignment="Center" 
+                                                            Margin="0"
                                                             FontFamily="HarmonyOS Sans SC"/>
                                         </MenuFlyout>
                                     </Button.Flyout>

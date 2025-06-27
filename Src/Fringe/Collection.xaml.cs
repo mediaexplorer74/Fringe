@@ -20,7 +20,6 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 
-// https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 
 namespace App3
 {
@@ -77,7 +76,8 @@ namespace App3
             string CollectionJson = JsonConvert.SerializeObject((Application.Current as App).CollectionList);
             try
             {
-                Windows.Storage.StorageFile CollectionFile = await StorageFolder.CreateFileAsync("LocalStorage2\\Collections.json", Windows.Storage.CreationCollisionOption.OpenIfExists);
+                Windows.Storage.StorageFile CollectionFile = await StorageFolder.CreateFileAsync("LocalStorage2\\Collections.json", 
+                    Windows.Storage.CreationCollisionOption.OpenIfExists);
                 await Windows.Storage.FileIO.WriteTextAsync(CollectionFile, CollectionJson);
             }
             catch { }
@@ -123,7 +123,8 @@ namespace App3
             string CollectionJson = JsonConvert.SerializeObject((Application.Current as App).CollectionList);
             try
             {
-                Windows.Storage.StorageFile CollectionFile = await StorageFolder.CreateFileAsync("LocalStorage2\\Collections.json", Windows.Storage.CreationCollisionOption.OpenIfExists);
+                Windows.Storage.StorageFile CollectionFile = await StorageFolder.CreateFileAsync("LocalStorage2\\Collections.json", 
+                    Windows.Storage.CreationCollisionOption.OpenIfExists);
                 await Windows.Storage.FileIO.WriteTextAsync(CollectionFile, CollectionJson);
             }
             catch { }
@@ -135,8 +136,10 @@ namespace App3
             {
                 string WTitle = (Application.Current as App).CollectionList[ListView.SelectedIndex].CollectionTitle;
                 string WUri = (Application.Current as App).CollectionList[ListView.SelectedIndex].CollectionUri;
-                (Application.Current as App).CollectionList[ListView.SelectedIndex].CollectionTitle = (Application.Current as App).CollectionList[ListView.SelectedIndex - 1].CollectionTitle;
-                (Application.Current as App).CollectionList[ListView.SelectedIndex].CollectionUri = (Application.Current as App).CollectionList[ListView.SelectedIndex - 1].CollectionUri;
+                (Application.Current as App).CollectionList[ListView.SelectedIndex].CollectionTitle 
+                    = (Application.Current as App).CollectionList[ListView.SelectedIndex - 1].CollectionTitle;
+                (Application.Current as App).CollectionList[ListView.SelectedIndex].CollectionUri 
+                    = (Application.Current as App).CollectionList[ListView.SelectedIndex - 1].CollectionUri;
                 (Application.Current as App).CollectionList[ListView.SelectedIndex - 1].CollectionTitle = WTitle;
                 (Application.Current as App).CollectionList[ListView.SelectedIndex - 1].CollectionUri = WUri;
                 int SIndex = ListView.SelectedIndex;
@@ -152,8 +155,10 @@ namespace App3
             {
                 string WTitle = (Application.Current as App).CollectionList[ListView.SelectedIndex].CollectionTitle;
                 string WUri = (Application.Current as App).CollectionList[ListView.SelectedIndex].CollectionUri;
-                (Application.Current as App).CollectionList[ListView.SelectedIndex].CollectionTitle = (Application.Current as App).CollectionList[ListView.SelectedIndex + 1].CollectionTitle;
-                (Application.Current as App).CollectionList[ListView.SelectedIndex].CollectionUri = (Application.Current as App).CollectionList[ListView.SelectedIndex + 1].CollectionUri;
+                (Application.Current as App).CollectionList[ListView.SelectedIndex].CollectionTitle 
+                    = (Application.Current as App).CollectionList[ListView.SelectedIndex + 1].CollectionTitle;
+                (Application.Current as App).CollectionList[ListView.SelectedIndex].CollectionUri 
+                    = (Application.Current as App).CollectionList[ListView.SelectedIndex + 1].CollectionUri;
                 (Application.Current as App).CollectionList[ListView.SelectedIndex + 1].CollectionTitle = WTitle;
                 (Application.Current as App).CollectionList[ListView.SelectedIndex + 1].CollectionUri = WUri;
                 int SIndex = ListView.SelectedIndex;

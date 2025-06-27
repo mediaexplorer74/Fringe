@@ -1,4 +1,7 @@
-## Fringe Browser
+## Fringe Browser 2.0.42 - uwp branch
+
+![](/Images/logo.png)
+
 My fork of Fringe browser (a browser based on WinUI & UWP, supported modern EdgeHTML core / WebView2).
 
 ## Download address
@@ -17,19 +20,19 @@ My fork of Fringe browser (a browser based on WinUI & UWP, supported modern Edge
 
 ## Screenshots
 - New tab: 
-![Figure 2025-05-17 160652](https://github.com/user-attachments/assets/537fea7a-d9b9-4f30-9158-b703a943e75e).
+![](/Images/sshot01.png)
 
 - Tab list: 
-![Figure 2025-05-17 160829](https://github.com/user-attachments/assets/d335d4f1-bcab-4a93-bc99-c34a47d1a3ed).
+![](/Images/sshot02.png)
 
 - Favorites:
-![Figure 2025-05-17 161156](https://github.com/user-attachments/assets/474837c7-d671-419a-9093-57de680991ad).
+![](/Images/sshot03.png)
 
 - Set up: 
-![Figure 2025-05-17 161930](https://github.com/user-attachments/assets/2ad5a741-cf41-4cea-9b36-2b21cf60f837).
+![](/Images/sshot04.png)
 
 - Web browsing: 
-![Figure 2025-05-17 161556](https://github.com/user-attachments/assets/dad2433c-5802-49c7-a922-c9a9d9a9a479).
+![](/Images/sshot05.png)
 
 ## My 2 cents
 - Chinese - International English semi-translation (to be continued)

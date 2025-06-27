@@ -45,7 +45,8 @@
                     </Grid>
                     <Grid HorizontalAlignment = "Stretch" Margin = "0,6,0,0" MinHeight = "68" MaxHeight = "68" Height = "68">
                         <Button IsTabStop="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0"/>
-                        <TextBlock FontFamily="HarmonyOS Sans SC" FontSize = "16" Text = "显示历史记录" Margin = "26,0,0,0" VerticalAlignment = "Center" HorizontalAlignment = "Left" />
+                        <TextBlock FontFamily="HarmonyOS Sans SC" FontSize = "16" Text = "Show history" Margin = "26,0,0,0" 
+                                   VerticalAlignment = "Center" HorizontalAlignment = "Left" />
                         <Grid Background="Transparent" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
                         <ToggleSwitch FontFamily="HarmonyOS Sans SC" AutomationProperties.Name="Show history" Name="ShowHistory_Switch" 
                                       Toggled="History_Toggled" Margin="0,0,-52,0" VerticalAlignment = "Center" HorizontalAlignment = "Right" />

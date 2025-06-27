@@ -235,20 +235,24 @@ namespace App3
             {
                 Windows.Storage.StorageFolder StorageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
                 string CollectionJson = JsonConvert.SerializeObject((Application.Current as App).CollectionList);
-                Windows.Storage.StorageFile CollectionFile = await StorageFolder.CreateFileAsync("LocalStorage2\\Collections.json", Windows.Storage.CreationCollisionOption.OpenIfExists);
+                Windows.Storage.StorageFile CollectionFile = await StorageFolder.CreateFileAsync("LocalStorage2\\Collections.json", 
+                    Windows.Storage.CreationCollisionOption.OpenIfExists);
                 await Windows.Storage.FileIO.WriteTextAsync(CollectionFile, CollectionJson);
                 string HistoryJson = JsonConvert.SerializeObject((Application.Current as App).HistoryList);
-                Windows.Storage.StorageFile HistoryFile = await StorageFolder.CreateFileAsync("LocalStorage2\\History.json", Windows.Storage.CreationCollisionOption.OpenIfExists);
+                Windows.Storage.StorageFile HistoryFile = await StorageFolder.CreateFileAsync("LocalStorage2\\History.json", 
+                    Windows.Storage.CreationCollisionOption.OpenIfExists);
                 await Windows.Storage.FileIO.WriteTextAsync(HistoryFile, HistoryJson);
             }
             catch
             {
                 Windows.Storage.StorageFolder StorageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
                 string CollectionJson = JsonConvert.SerializeObject((Application.Current as App).CollectionList);
-                Windows.Storage.StorageFile CollectionFile = await StorageFolder.CreateFileAsync("LocalStorage2\\Collections.json", Windows.Storage.CreationCollisionOption.OpenIfExists);
+                Windows.Storage.StorageFile CollectionFile = await StorageFolder.CreateFileAsync("LocalStorage2\\Collections.json", 
+                    Windows.Storage.CreationCollisionOption.OpenIfExists);
                 await Windows.Storage.FileIO.WriteTextAsync(CollectionFile, CollectionJson);
                 string HistoryJson = JsonConvert.SerializeObject((Application.Current as App).HistoryList);
-                Windows.Storage.StorageFile HistoryFile = await StorageFolder.CreateFileAsync("LocalStorage2\\History.json", Windows.Storage.CreationCollisionOption.OpenIfExists);
+                Windows.Storage.StorageFile HistoryFile = await StorageFolder.CreateFileAsync("LocalStorage2\\History.json",
+                    Windows.Storage.CreationCollisionOption.OpenIfExists);
                 await Windows.Storage.FileIO.WriteTextAsync(HistoryFile, HistoryJson);
             }
         }
@@ -297,7 +301,8 @@ namespace App3
                     ((SideWindow.Content) as History).OnClosing();
                 SideWindow.Content = null;
             }
-            TabListGrid.Visibility = (TabListGridTransform.X < TabListWindow.Width && !IsTabListWindowOpen || IsTabListWindowOpen) ? Visibility.Visible : Visibility.Collapsed;
+            TabListGrid.Visibility = (TabListGridTransform.X < TabListWindow.Width 
+                && !IsTabListWindowOpen || IsTabListWindowOpen) ? Visibility.Visible : Visibility.Collapsed;
         
             for(int i = 0; i < ListView.Items.Count; i++)
             {
@@ -345,7 +350,7 @@ namespace App3
                 frame.Navigate(typeof(WebPage));
             }
             NewTabPage.Content = frame;
-            NewTabPage.Header = "新标签页";
+            NewTabPage.Header = "New Tab";
             //newItem.IconSource = new Microsoft.UI.Xaml.Controls.SymbolIconSource() { Symbol = Symbol.Stop };
 
             MicrosoftEdge.TabItems.Add(NewTabPage);
@@ -457,12 +462,14 @@ namespace App3
         public void ShowSideWindow(int ToOpen = 0)
         {
             
-            if (SideWindow.Content != null && ((ToOpen == 1 && IsSideWindowOpen && SideWindow.Content.GetType() == typeof(Collection)) || (ToOpen == 2 && IsSideWindowOpen && SideWindow.Content.GetType() == typeof(History))))
+            if (SideWindow.Content != null && ((ToOpen == 1 && IsSideWindowOpen && SideWindow.Content.GetType() == typeof(Collection))
+                || (ToOpen == 2 && IsSideWindowOpen && SideWindow.Content.GetType() == typeof(History))))
             {
                 (SideFlowIn.EasingFunction as ExponentialEase).Exponent = 8;
                 ToOpen = 0;
             }
-            else if (SideWindow.Content != null && ((ToOpen == 2 && IsSideWindowOpen && SideWindow.Content.GetType() == typeof(Collection)) || (ToOpen == 1 && IsSideWindowOpen && SideWindow.Content.GetType() == typeof(History))))
+            else if (SideWindow.Content != null && ((ToOpen == 2 && IsSideWindowOpen && SideWindow.Content.GetType() == typeof(Collection))
+                || (ToOpen == 1 && IsSideWindowOpen && SideWindow.Content.GetType() == typeof(History))))
             {
                 /*SideGridTransform.X = SideWindow.Width;
                 SideGrid.Opacity = 1;*/
@@ -661,7 +668,9 @@ namespace App3
             if (IsSideWindowOpen)
             {
                 SWindowX = SWindowX + e.Delta.Translation.X;
-                if (SWindowX > 0 && e.PointerDeviceType != Windows.Devices.Input.PointerDeviceType.Mouse && (this.SideWindow.Content.GetType() != typeof(Collection) || (this.SideWindow.Content.GetType() == typeof(Collection) && !(SideWindow.Content as Collection).isEditing)))
+                if (SWindowX > 0 && e.PointerDeviceType != Windows.Devices.Input.PointerDeviceType.Mouse 
+                    && (this.SideWindow.Content.GetType() != typeof(Collection) 
+                    || (this.SideWindow.Content.GetType() == typeof(Collection) && !(SideWindow.Content as Collection).isEditing)))
                 {
                     SideGridTransform.X += e.Delta.Translation.X;
                 }
@@ -674,7 +683,9 @@ namespace App3
 
         private void SideGrid_ManipulationCompleted(object sender, ManipulationCompletedRoutedEventArgs e)
         {
-            if (e.Velocities.Linear.X >= 0.5 && e.PointerDeviceType != Windows.Devices.Input.PointerDeviceType.Mouse && (this.SideWindow.Content.GetType() != typeof(Collection) || (this.SideWindow.Content.GetType() == typeof(Collection) && !(SideWindow.Content as Collection).isEditing)))
+            if (e.Velocities.Linear.X >= 0.5 && e.PointerDeviceType != Windows.Devices.Input.PointerDeviceType.Mouse 
+                && (this.SideWindow.Content.GetType() != typeof(Collection)
+                || (this.SideWindow.Content.GetType() == typeof(Collection) && !(SideWindow.Content as Collection).isEditing)))
             {
                 (SideFlowIn.EasingFunction as ExponentialEase).Exponent = (e.Velocities.Linear.X) * 4;
                 ShowSideWindow(0);

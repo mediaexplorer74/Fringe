@@ -16,7 +16,6 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Threading;
 
-// https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 
 namespace App3
 {
@@ -52,12 +51,14 @@ namespace App3
 
         private void Timer_Tick(object sender, object e)
         {
-            if ((App.Current.RequestedTheme == ApplicationTheme.Light && (Application.Current as App).ThemeSelected == 0) || (Application.Current as App).ThemeSelected == 1)
+            if ((App.Current.RequestedTheme == ApplicationTheme.Light
+                && (Application.Current as App).ThemeSelected == 0) || (Application.Current as App).ThemeSelected == 1)
             {
                 SeparateLineDark.StrokeThickness = 0;
                 SeparateLineLight.StrokeThickness = 0.5;
             }
-            else if ((App.Current.RequestedTheme == ApplicationTheme.Dark && (Application.Current as App).ThemeSelected == 0) || (Application.Current as App).ThemeSelected == 2)
+            else if ((App.Current.RequestedTheme == ApplicationTheme.Dark 
+                && (Application.Current as App).ThemeSelected == 0) || (Application.Current as App).ThemeSelected == 2)
             {
                 SeparateLineDark.StrokeThickness = 0.5;
                 SeparateLineLight.StrokeThickness = 0;

@@ -27,7 +27,6 @@ using Windows.ApplicationModel.Contacts;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
 
-// https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 
 namespace App3
 {
@@ -67,11 +66,11 @@ namespace App3
                 (Application.Current as App).WebLink = EdgeWebView.Source.ToString();
                 if (EdgeWebView.Source.ToString() == "about:blank")
                 {
-                    Browser.SelectedTab.Header = "新标签页";
+                    Browser.SelectedTab.Header = "New Tab";
                 }
                 else if(EdgeWebView.DocumentTitle == "")
                 {
-                    Browser.SelectedTab.Header = "加载中";
+                    Browser.SelectedTab.Header = "New Tab";
                 }
                 else
                 {
@@ -137,19 +136,25 @@ namespace App3
             if (Browser.PageTabStopSet == 0)
             {
                 SearchBox.IsTabStop = true;
-                Button_Back.IsTabStop = Button_Forward.IsTabStop = Button_Refresh.IsTabStop = ButtonM_Back.IsTabStop = ButtonM_Forward.IsTabStop = ButtonM_Refresh.IsTabStop = ButtonM_NewTab.IsTabStop = ButtonM_TabList.IsTabStop = ButtonM_More.IsTabStop = CollectionButton.IsTabStop = HistoryButton.IsTabStop = DownloadButton.IsTabStop = MoreButton.IsTabStop = true;
+                Button_Back.IsTabStop = Button_Forward.IsTabStop = Button_Refresh.IsTabStop = ButtonM_Back.IsTabStop 
+                    = ButtonM_Forward.IsTabStop = ButtonM_Refresh.IsTabStop = ButtonM_NewTab.IsTabStop = ButtonM_TabList.IsTabStop 
+                    = ButtonM_More.IsTabStop = CollectionButton.IsTabStop = HistoryButton.IsTabStop = DownloadButton.IsTabStop = MoreButton.IsTabStop = true;
                 LinkBox.IsTabStop = true;
             }
             else if (Browser.PageTabStopSet == 1)
             {
                 SearchBox.IsTabStop = false;
-                Button_Back.IsTabStop = Button_Forward.IsTabStop = Button_Refresh.IsTabStop = ButtonM_Back.IsTabStop = ButtonM_Forward.IsTabStop = ButtonM_Refresh.IsTabStop = ButtonM_NewTab.IsTabStop = ButtonM_TabList.IsTabStop = ButtonM_More.IsTabStop = CollectionButton.IsTabStop = HistoryButton.IsTabStop = DownloadButton.IsTabStop = MoreButton.IsTabStop = true;
+                Button_Back.IsTabStop = Button_Forward.IsTabStop = Button_Refresh.IsTabStop = ButtonM_Back.IsTabStop 
+                    = ButtonM_Forward.IsTabStop = ButtonM_Refresh.IsTabStop = ButtonM_NewTab.IsTabStop = ButtonM_TabList.IsTabStop 
+                    = ButtonM_More.IsTabStop = CollectionButton.IsTabStop = HistoryButton.IsTabStop = DownloadButton.IsTabStop = MoreButton.IsTabStop = true;
                 LinkBox.IsTabStop = true;
             }
             else if (Browser.PageTabStopSet == 2)
             {
                 SearchBox.IsTabStop = false;
-                Button_Back.IsTabStop = Button_Forward.IsTabStop = Button_Refresh.IsTabStop = ButtonM_Back.IsTabStop = ButtonM_Forward.IsTabStop = ButtonM_Refresh.IsTabStop = ButtonM_NewTab.IsTabStop = ButtonM_TabList.IsTabStop = ButtonM_More.IsTabStop = CollectionButton.IsTabStop = HistoryButton.IsTabStop = DownloadButton.IsTabStop = MoreButton.IsTabStop = false;
+                Button_Back.IsTabStop = Button_Forward.IsTabStop = Button_Refresh.IsTabStop = ButtonM_Back.IsTabStop 
+                    = ButtonM_Forward.IsTabStop = ButtonM_Refresh.IsTabStop = ButtonM_NewTab.IsTabStop = ButtonM_TabList.IsTabStop 
+                    = ButtonM_More.IsTabStop = CollectionButton.IsTabStop = HistoryButton.IsTabStop = DownloadButton.IsTabStop = MoreButton.IsTabStop = false;
                 LinkBox.IsTabStop = false;
             }
         }
@@ -199,7 +204,8 @@ namespace App3
         private void LinkChanged(object sender, KeyRoutedEventArgs e)
         {
             LinkTyping = true;
-            if ((EdgeWebView.VerticalAlignment != VerticalAlignment.Stretch || LinkBox.Text.ToString() != EdgeWebView.Source.ToString()) && LinkBox.Text != "" && e.Key == Windows.System.VirtualKey.Enter)
+            if ((EdgeWebView.VerticalAlignment != VerticalAlignment.Stretch || LinkBox.Text.ToString() != EdgeWebView.Source.ToString()) 
+                && LinkBox.Text != "" && e.Key == Windows.System.VirtualKey.Enter)
             {
                 Browser.ShowSideWindow(0);
                 Browser.ShowTabListWindow(0);

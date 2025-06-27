@@ -13,7 +13,8 @@
         <Grid HorizontalAlignment="Stretch" MinWidth="360" ManipulationDelta="Grid_ManipulationDelta" ManipulationMode="TranslateX"
               ManipulationCompleted="Grid_ManipulationCompleted" ManipulationStarted="Grid_ManipulationStarted">
             <Grid Name="NavigationBar">
-                <Button Name="LeftBar" IsTabStop="False" IsEnabled="True" CornerRadius="0" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="70" Margin="-2,-2,0,-2"/>
+                <Button Name="LeftBar" IsTabStop="False" IsEnabled="True" CornerRadius="0" VerticalAlignment="Stretch" HorizontalAlignment="Left"
+                        Width="70" Margin="-2,-2,0,-2"/>
                 <Grid Background="Transparent" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="70" Margin="-2,-2,0,-2"/>
                 <StackPanel Name="NavigationButtons">
                     <ToggleButton AutomationProperties.Name="Appearance" Name="NavAppearanceButton" Background="Transparent" 
