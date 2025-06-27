@@ -35,7 +35,7 @@ My fork of Fringe browser (a browser based on WinUI & UWP, supported modern Edge
 ![](/Images/sshot05.png)
 
 ## My 2 cents
-- Chinese - International English semi-translation (to be continued)
+- Chinese - International English UI translation
 
 ## Tech. details
 - App type: UWP
